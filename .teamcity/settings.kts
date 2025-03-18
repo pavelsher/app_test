@@ -1,4 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
+import jetbrains.buildServer.configs.kotlin.buildFeatures.pullRequests
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
@@ -49,6 +51,18 @@ object BuildAll : BuildType({
     triggers {
         vcs {
             branchFilter = "+:pull/*"
+        }
+    }
+
+    features {
+        pullRequests {
+            vcsRootExtId = "${DTmpSettings105.id}"
+            provider = github {
+                authType = token {
+                    token = "credentialsJSON:a4fc33cf-11f9-4f53-b379-0e7bad097c07"
+                }
+                filterAuthorRole = PullRequests.GitHubRoleFilter.MEMBER
+            }
         }
     }
 
