@@ -38,14 +38,14 @@ project {
 
 object BuildAll : BuildType({
     name = "Build All"
-    description = "builds everything 23456"
+    description = "builds everything 234567"
 
     type = BuildTypeSettings.Type.COMPOSITE
 
     vcs {
         root(DTmpSettings105)
 
-        showDependenciesChanges = true
+        showDependenciesChanges = false
     }
 
     triggers {
