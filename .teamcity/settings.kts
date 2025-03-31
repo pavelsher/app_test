@@ -83,7 +83,7 @@ object BuildSomething : BuildType({
 object DTmpSettings105 : GitVcsRoot({
     name = "Main"
     url = "git@github.com:pavelsher/app_test.git"
-    branch = "refs/heads/main"
+    branch = "main"
     branchSpec = "+:refs/heads/*"
     authMethod = uploadedKey {
         uploadedKey = "repo_key"
