@@ -54,6 +54,10 @@ object BuildAll : BuildType({
         }
     }
 
+    params {
+       param("p1", "v1")
+    }
+
     features {
         pullRequests {
             vcsRootExtId = "${DTmpSettings105.id}"
