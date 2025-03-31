@@ -38,7 +38,7 @@ project {
 
 object BuildAll : BuildType({
     name = "Build All"
-    description = "builds everything 123456789012345"
+    description = "builds everything"
 
     type = BuildTypeSettings.Type.COMPOSITE
 
