@@ -74,6 +74,7 @@ object BuildAll : BuildType({
 
 object BuildSomething : BuildType({
     name = "Build Something"
+    description = "aaa"
 
     vcs {
         root(DTmpSettings105, "+:.", "-:.teamcity", "+:.teamcity/scripts")
