@@ -38,7 +38,7 @@ project {
 
 object BuildAll : BuildType({
     name = "Build All"
-    description = "builds everything 123456789012345"
+    description = "builds everything"
 
     type = BuildTypeSettings.Type.COMPOSITE
 
@@ -54,6 +54,10 @@ object BuildAll : BuildType({
         }
     }
 
+    params {
+       param("p1", "v1")
+    }
+
     features {
         pullRequests {
             vcsRootExtId = "${DTmpSettings105.id}"
@@ -66,10 +70,6 @@ object BuildAll : BuildType({
         }
     }
 
-    dependencies {
-        snapshot(BuildSomething) {
-        }
-    }
 })
 
 object BuildSomething : BuildType({
