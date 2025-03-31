@@ -70,10 +70,6 @@ object BuildAll : BuildType({
         }
     }
 
-    dependencies {
-        snapshot(BuildSomething) {
-        }
-    }
 })
 
 object BuildSomething : BuildType({
