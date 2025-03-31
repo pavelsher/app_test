@@ -55,7 +55,7 @@ object BuildAll : BuildType({
     }
 
     params {
-       param("p1", "v1")
+       param("p2", "v2")
     }
 
     features {
